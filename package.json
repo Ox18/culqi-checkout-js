@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/main/server.js"
+    "dev": "nodemon src/main/server.js",
+    "build": "echo \"Error: no build specified\"",
+    "start": "node src/main/server.js"
   },
   "keywords": [],
   "author": "Wilmer Delgado",
