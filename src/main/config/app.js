@@ -1,15 +1,21 @@
 const express = require("express");
 const setupControllers = require("./controllers");
 const setupRouter = require("./router");
-const middleware = require("./middleware");
+const setupMiddleware = require("./middleware");
+const setupEngne = require("./engine")
+const setupDirectory = require("./directory")
+const setupPage = require("./page")
 
 const setupApp = async () => {
   const app = express();
 
-  middleware(app);
+  setupEngne(app)
+  setupDirectory(app)
+  setupMiddleware(app);
 
   const controllers = await setupControllers();
   setupRouter(app, controllers);
+  setupPage(app)
 
   return app;
 };
