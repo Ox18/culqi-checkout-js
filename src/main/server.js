@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
-const env = require("../config/env");
+const env = require("./config/env");
 const logger = require("../../shared/libs/logger");
 const setupApp = require("../config/app");
 
