@@ -1,12 +1,14 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const env = require("./config/env");
-const logger = require("../../shared/libs/logger");
-const setupApp = require("../config/app");
+const logger = require("../shared/libs/logger");
+const setupApp = require("./config/app");
+
+var app = null;
 
 (async () => {
   try {
-    const app = await setupApp();
+    app = await setupApp();
     app.listen(env.port, () =>
       logger.info(`Server running on http://localhost:${env.port}`)
     );
