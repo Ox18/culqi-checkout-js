@@ -10,3 +10,5 @@ const setupApp = require("./config/app");
     logger.info(`Server running on http://localhost:${env.port}`)
   );
 })();
+
+module.exports = app;
